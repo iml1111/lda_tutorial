@@ -7,3 +7,4 @@ lda_trainer.train(num_topics=5,
 					  passes=30,
 					  iterations=10,
 					  workers=4)
+lda_trainer.save()

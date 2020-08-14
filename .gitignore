@@ -5,6 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
+lda_model*
+lda_dict
 
 # Distribution / packaging
 .Python

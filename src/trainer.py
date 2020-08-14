@@ -2,8 +2,6 @@ import re
 from gensim.test.utils import datapath
 from gensim import corpora, models
 from gensim.models.ldamulticore import LdaMulticore
-from gensim.models.coherencemodel import CoherenceModel
-import pyLDAvis.gensim
 
 class LDATrainer:
     """docstring for LDAModelHandler"""
@@ -57,6 +55,11 @@ class LDATrainer:
                                 workers=workers,
                                 iterations=iterations)
         self.model = ldamodel
+
+
+    def save(self, model_path = "./lda_model", dict_path = "./lda_dict"):
+        self.model.save(model_path)
+        self.dictionary.save(dict_path)
 
 
 
